@@ -1,0 +1,104 @@
+{
+    "1. Baseline ResNet-18 (Rep 2)": {
+        "accuracy": 0.746875,
+        "accuracy_std": 0.0,
+        "precision": 0.7724137931034483,
+        "precision_std": 0.0,
+        "recall": 0.7,
+        "recall_std": 0.0,
+        "macro_f1": 0.7463175923660386,
+        "macro_f1_std": 0.0,
+        "roc_auc": 0.8091992187500001,
+        "roc_auc_std": 0.0,
+        "fpr": 0.20625,
+        "fpr_std": 0.0,
+        "confusion_matrix": [
+            [
+                127,
+                33
+            ],
+            [
+                48,
+                112
+            ]
+        ]
+    },
+    "2. SE-Attention ResNet (Rep 2)": {
+        "accuracy": 0.721875,
+        "accuracy_std": 0.0,
+        "precision": 0.7448275862068966,
+        "precision_std": 0.0,
+        "recall": 0.675,
+        "recall_std": 0.0,
+        "macro_f1": 0.7212625397602153,
+        "macro_f1_std": 0.0,
+        "roc_auc": 0.8149609375,
+        "roc_auc_std": 0.0,
+        "fpr": 0.23125,
+        "fpr_std": 0.0,
+        "confusion_matrix": [
+            [
+                123,
+                37
+            ],
+            [
+                52,
+                108
+            ]
+        ]
+    },
+    "3. Rep 1 Single (Doppler-Time)": {
+        "accuracy": 0.51875,
+        "precision": 0.5217391304347826,
+        "recall": 0.45,
+        "macro_f1": 0.5164645394246242,
+        "roc_auc": 0.5406640625,
+        "fpr": 0.4125,
+        "confusion_matrix": [
+            [
+                94,
+                66
+            ],
+            [
+                88,
+                72
+            ]
+        ]
+    },
+    "4. Rep 3 Single (3D Point Sets)": {
+        "accuracy": 0.55,
+        "precision": 0.5579710144927537,
+        "recall": 0.48125,
+        "macro_f1": 0.5478629459554928,
+        "roc_auc": 0.5909765625000001,
+        "fpr": 0.38125,
+        "confusion_matrix": [
+            [
+                99,
+                61
+            ],
+            [
+                83,
+                77
+            ]
+        ]
+    },
+    "5. Multi-Rep Late Fusion Ensemble (Rep 1+2+3)": {
+        "accuracy": 0.665625,
+        "precision": 0.7226890756302521,
+        "recall": 0.5375,
+        "macro_f1": 0.6600442816151868,
+        "roc_auc": 0.7517578125,
+        "fpr": 0.20625,
+        "confusion_matrix": [
+            [
+                127,
+                33
+            ],
+            [
+                74,
+                86
+            ]
+        ]
+    }
+}

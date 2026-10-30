@@ -1,0 +1,353 @@
+{
+  "experiment_metadata": {
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "window_size": 10,
+    "resampling_N": 32,
+    "folds": [
+      "Areeb",
+      "Raffay",
+      "Towsif"
+    ]
+  },
+  "representations": {
+    "Rep_1_Doppler_Time": {
+      "pooled_confusion_matrix": {
+        "TP": 108,
+        "FP": 44,
+        "TN": 116,
+        "FN": 52
+      },
+      "macro_f1": {
+        "mean": 0.682999659478083,
+        "std": 0.014287069261711081
+      },
+      "recall": {
+        "mean": 0.6958333333333334,
+        "std": 0.015590239111558074
+      },
+      "precision": {
+        "mean": 0.6802475886686413,
+        "std": 0.024148621932229504
+      },
+      "accuracy": {
+        "mean": 0.6833333333333332,
+        "std": 0.014052851628366681
+      },
+      "roc_auc": {
+        "mean": 0.7382942708333333,
+        "std": 0.025181517406659727
+      },
+      "confounder_far": {
+        "mean": 0.32916666666666666,
+        "std": 0.04340138886666594
+      },
+      "latency_ms": {
+        "prep": 7.29,
+        "forward": 131.16,
+        "total": 138.45
+      }
+    },
+    "Rep_2_Orthogonal_Projections": {
+      "pooled_confusion_matrix": {
+        "TP": 125,
+        "FP": 48,
+        "TN": 112,
+        "FN": 35
+      },
+      "macro_f1": {
+        "mean": 0.7241871952159006,
+        "std": 0.018298209299853593
+      },
+      "recall": {
+        "mean": 0.7770833333333332,
+        "std": 0.005892556509887875
+      },
+      "precision": {
+        "mean": 0.7042177475703487,
+        "std": 0.020358345299753017
+      },
+      "accuracy": {
+        "mean": 0.725,
+        "std": 0.01786086270779402
+      },
+      "roc_auc": {
+        "mean": 0.7955208333333333,
+        "std": 0.02571140185673211
+      },
+      "confounder_far": {
+        "mean": 0.32708333333333334,
+        "std": 0.029901458530015274
+      },
+      "latency_ms": {
+        "prep": 2.47,
+        "forward": 28.02,
+        "total": 30.48
+      }
+    },
+    "Rep_3_Native_3D_Point_Sets": {
+      "pooled_confusion_matrix": {
+        "TP": 84,
+        "FP": 48,
+        "TN": 112,
+        "FN": 76
+      },
+      "macro_f1": {
+        "mean": 0.5998599452772909,
+        "std": 0.043518172705607164
+      },
+      "recall": {
+        "mean": 0.4979166666666666,
+        "std": 0.07150417625721046
+      },
+      "precision": {
+        "mean": 0.6306815635173844,
+        "std": 0.04204923373500733
+      },
+      "accuracy": {
+        "mean": 0.6052083333333332,
+        "std": 0.039883728581409705
+      },
+      "roc_auc": {
+        "mean": 0.6621874999999999,
+        "std": 0.0294574937354568
+      },
+      "confounder_far": {
+        "mean": 0.28750000000000003,
+        "std": 0.013501543121683045
+      },
+      "latency_ms": {
+        "prep": 0.01,
+        "forward": 10.89,
+        "total": 10.9
+      }
+    }
+  },
+  "seed_ablation_comparison": {
+    "seed_42": {
+      "Rep_1_Doppler_Time": {
+        "accuracy": 0.7,
+        "precision": 0.7105263157894737,
+        "recall": 0.675,
+        "macro_f1": 0.699812382739212,
+        "roc_auc": 0.7738671874999998,
+        "confounder_far": 0.275,
+        "confusion_matrix": {
+          "TP": 108,
+          "FP": 44,
+          "TN": 116,
+          "FN": 52
+        },
+        "cm_raw": [
+          [
+            116,
+            44
+          ],
+          [
+            52,
+            108
+          ]
+        ]
+      },
+      "Rep_2_Orthogonal_Projections": {
+        "accuracy": 0.740625,
+        "precision": 0.7225433526011561,
+        "recall": 0.78125,
+        "macro_f1": 0.7401962222809129,
+        "roc_auc": 0.8212109375,
+        "confounder_far": 0.3,
+        "confusion_matrix": {
+          "TP": 125,
+          "FP": 48,
+          "TN": 112,
+          "FN": 35
+        },
+        "cm_raw": [
+          [
+            112,
+            48
+          ],
+          [
+            35,
+            125
+          ]
+        ]
+      },
+      "Rep_3_Native_3D_Point_Sets": {
+        "accuracy": 0.6125,
+        "precision": 0.6363636363636364,
+        "recall": 0.525,
+        "macro_f1": 0.6095103133364824,
+        "roc_auc": 0.6443359375,
+        "confounder_far": 0.3,
+        "confusion_matrix": {
+          "TP": 84,
+          "FP": 48,
+          "TN": 112,
+          "FN": 76
+        },
+        "cm_raw": [
+          [
+            112,
+            48
+          ],
+          [
+            76,
+            84
+          ]
+        ]
+      }
+    },
+    "seed_52": {
+      "Rep_1_Doppler_Time": {
+        "accuracy": 0.665625,
+        "precision": 0.6514285714285715,
+        "recall": 0.7125,
+        "macro_f1": 0.6648886713971128,
+        "roc_auc": 0.721953125,
+        "confounder_far": 0.38125,
+        "confusion_matrix": {
+          "TP": 114,
+          "FP": 61,
+          "TN": 99,
+          "FN": 46
+        },
+        "cm_raw": [
+          [
+            99,
+            61
+          ],
+          [
+            46,
+            114
+          ]
+        ]
+      },
+      "Rep_2_Orthogonal_Projections": {
+        "accuracy": 0.7,
+        "precision": 0.6758241758241759,
+        "recall": 0.76875,
+        "macro_f1": 0.6985752973036619,
+        "roc_auc": 0.760390625,
+        "confounder_far": 0.36875,
+        "confusion_matrix": {
+          "TP": 123,
+          "FP": 59,
+          "TN": 101,
+          "FN": 37
+        },
+        "cm_raw": [
+          [
+            101,
+            59
+          ],
+          [
+            37,
+            123
+          ]
+        ]
+      },
+      "Rep_3_Native_3D_Point_Sets": {
+        "accuracy": 0.553125,
+        "precision": 0.5765765765765766,
+        "recall": 0.4,
+        "macro_f1": 0.5423954239542396,
+        "roc_auc": 0.638515625,
+        "confounder_far": 0.29375,
+        "confusion_matrix": {
+          "TP": 64,
+          "FP": 47,
+          "TN": 113,
+          "FN": 96
+        },
+        "cm_raw": [
+          [
+            113,
+            47
+          ],
+          [
+            96,
+            64
+          ]
+        ]
+      }
+    },
+    "seed_62": {
+      "Rep_1_Doppler_Time": {
+        "accuracy": 0.684375,
+        "precision": 0.6787878787878788,
+        "recall": 0.7,
+        "macro_f1": 0.6842979242979244,
+        "roc_auc": 0.7190624999999999,
+        "confounder_far": 0.33125,
+        "confusion_matrix": {
+          "TP": 112,
+          "FP": 53,
+          "TN": 107,
+          "FN": 48
+        },
+        "cm_raw": [
+          [
+            107,
+            53
+          ],
+          [
+            48,
+            112
+          ]
+        ]
+      },
+      "Rep_2_Orthogonal_Projections": {
+        "accuracy": 0.734375,
+        "precision": 0.7142857142857143,
+        "recall": 0.78125,
+        "macro_f1": 0.733790066063127,
+        "roc_auc": 0.8049609375,
+        "confounder_far": 0.3125,
+        "confusion_matrix": {
+          "TP": 125,
+          "FP": 50,
+          "TN": 110,
+          "FN": 35
+        },
+        "cm_raw": [
+          [
+            110,
+            50
+          ],
+          [
+            35,
+            125
+          ]
+        ]
+      },
+      "Rep_3_Native_3D_Point_Sets": {
+        "accuracy": 0.65,
+        "precision": 0.6791044776119403,
+        "recall": 0.56875,
+        "macro_f1": 0.6476740985411507,
+        "roc_auc": 0.7037109374999999,
+        "confounder_far": 0.26875,
+        "confusion_matrix": {
+          "TP": 91,
+          "FP": 43,
+          "TN": 117,
+          "FN": 69
+        },
+        "cm_raw": [
+          [
+            117,
+            43
+          ],
+          [
+            69,
+            91
+          ]
+        ]
+      }
+    }
+  }
+}

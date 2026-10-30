@@ -1,0 +1,110 @@
+{
+    "1. Single Rep 2 Baseline": {
+        "accuracy": 0.778125,
+        "precision": 0.8111888111888111,
+        "recall": 0.725,
+        "macro_f1": 0.7774970375375817,
+        "roc_auc": 0.869375,
+        "fpr": 0.16875,
+        "confusion_matrix": [
+            [
+                133,
+                27
+            ],
+            [
+                44,
+                116
+            ]
+        ]
+    },
+    "2. Single Rep 2 SE-Attention": {
+        "accuracy": 0.75,
+        "precision": 0.7985074626865671,
+        "recall": 0.66875,
+        "macro_f1": 0.7483386418151076,
+        "roc_auc": 0.8410546875,
+        "fpr": 0.16875,
+        "confusion_matrix": [
+            [
+                133,
+                27
+            ],
+            [
+                53,
+                107
+            ]
+        ]
+    },
+    "3. Single Rep 1 (Doppler-Time)": {
+        "accuracy": 0.51875,
+        "precision": 0.5217391304347826,
+        "recall": 0.45,
+        "macro_f1": 0.5164645394246242,
+        "roc_auc": 0.5406640625,
+        "fpr": 0.4125,
+        "confusion_matrix": [
+            [
+                94,
+                66
+            ],
+            [
+                88,
+                72
+            ]
+        ]
+    },
+    "4. Single Rep 3 (3D Point Sets)": {
+        "accuracy": 0.55,
+        "precision": 0.5579710144927537,
+        "recall": 0.48125,
+        "macro_f1": 0.5478629459554928,
+        "roc_auc": 0.5909765625000001,
+        "fpr": 0.38125,
+        "confusion_matrix": [
+            [
+                99,
+                61
+            ],
+            [
+                83,
+                77
+            ]
+        ]
+    },
+    "5. Multi-Rep Late Fusion Ensemble (Rep 1+2+3)": {
+        "accuracy": 0.6875,
+        "precision": 0.7238805970149254,
+        "recall": 0.60625,
+        "macro_f1": 0.6854233022688845,
+        "roc_auc": 0.7610156250000001,
+        "fpr": 0.23125,
+        "confusion_matrix": [
+            [
+                123,
+                37
+            ],
+            [
+                63,
+                97
+            ]
+        ]
+    },
+    "6. Optimized Ensemble (Rep 1 + SE-Rep 2 + Rep 3)": {
+        "accuracy": 0.69375,
+        "precision": 0.7214285714285714,
+        "recall": 0.63125,
+        "macro_f1": 0.6925490196078432,
+        "roc_auc": 0.7617578125,
+        "fpr": 0.24375,
+        "confusion_matrix": [
+            [
+                121,
+                39
+            ],
+            [
+                59,
+                101
+            ]
+        ]
+    }
+}

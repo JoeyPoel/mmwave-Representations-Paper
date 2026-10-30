@@ -1,0 +1,1243 @@
+{
+  "experiment_metadata": {
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "epochs": 20,
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "window_size": 10,
+    "stride": 5,
+    "resampling_N": 32,
+    "folds": [
+      "Areeb",
+      "Raffay",
+      "Towsif"
+    ],
+    "grid_units": "physical",
+    "grid_ranges": {
+      "v": [
+        -3.0,
+        3.0
+      ],
+      "z": [
+        -0.5,
+        2.2
+      ],
+      "xy": [
+        -1.5,
+        1.5
+      ]
+    },
+    "cpu": "AMD Ryzen 7 5700U with Radeon Graphics",
+    "torch_threads": 8,
+    "torch_version": "2.14.0+cpu",
+    "smoke_test": false
+  },
+  "representations": {
+    "Rep_1_Doppler_Time": {
+      "model": "Baseline ResNet-18",
+      "parameters": 11169858,
+      "macro_f1": {
+        "mean": 0.5301164903226053,
+        "std": 0.006095256261170841
+      },
+      "recall": {
+        "mean": 0.5229166666666667,
+        "std": 0.0694722166688878
+      },
+      "precision": {
+        "mean": 0.5334043306220447,
+        "std": 0.008854242298494354
+      },
+      "accuracy": {
+        "mean": 0.5322916666666666,
+        "std": 0.00736569563735987
+      },
+      "roc_auc": {
+        "mean": 0.5516145833333334,
+        "std": 0.004388967349696442
+      },
+      "confounder_far": {
+        "mean": 0.4583333333333333,
+        "std": 0.06660153067977408
+      },
+      "confusion_matrix_seed42": {
+        "TP": 79,
+        "FP": 72,
+        "TN": 88,
+        "FN": 81
+      },
+      "confusion_matrix_per_seed": {
+        "seed_42": {
+          "TP": 79,
+          "FP": 72,
+          "TN": 88,
+          "FN": 81
+        },
+        "seed_52": {
+          "TP": 73,
+          "FP": 61,
+          "TN": 99,
+          "FN": 87
+        },
+        "seed_62": {
+          "TP": 99,
+          "FP": 87,
+          "TN": 73,
+          "FN": 61
+        }
+      },
+      "confusion_matrix_pooled_all_seeds": {
+        "TP": 251,
+        "FP": 220,
+        "TN": 260,
+        "FN": 229
+      },
+      "latency_ms": {
+        "prep": 0.347,
+        "forward": 20.542,
+        "total": 20.889
+      }
+    },
+    "Rep_2_Orthogonal_Projections": {
+      "model": "Baseline ResNet-18",
+      "parameters": 11169858,
+      "macro_f1": {
+        "mean": 0.7059889836997142,
+        "std": 0.01487206635615448
+      },
+      "recall": {
+        "mean": 0.6458333333333334,
+        "std": 0.0193200385322827
+      },
+      "precision": {
+        "mean": 0.7379877257032392,
+        "std": 0.02879886664041525
+      },
+      "accuracy": {
+        "mean": 0.7072916666666668,
+        "std": 0.015380024021076449
+      },
+      "roc_auc": {
+        "mean": 0.8018489583333333,
+        "std": 0.01240152180401891
+      },
+      "confounder_far": {
+        "mean": 0.23124999999999998,
+        "std": 0.03985651347856039
+      },
+      "confusion_matrix_seed42": {
+        "TP": 105,
+        "FP": 33,
+        "TN": 127,
+        "FN": 55
+      },
+      "confusion_matrix_per_seed": {
+        "seed_42": {
+          "TP": 105,
+          "FP": 33,
+          "TN": 127,
+          "FN": 55
+        },
+        "seed_52": {
+          "TP": 106,
+          "FP": 46,
+          "TN": 114,
+          "FN": 54
+        },
+        "seed_62": {
+          "TP": 99,
+          "FP": 32,
+          "TN": 128,
+          "FN": 61
+        }
+      },
+      "confusion_matrix_pooled_all_seeds": {
+        "TP": 310,
+        "FP": 111,
+        "TN": 369,
+        "FN": 170
+      },
+      "latency_ms": {
+        "prep": 0.816,
+        "forward": 18.399,
+        "total": 19.215
+      }
+    },
+    "Rep_3_Native_3D_Point_Sets": {
+      "model": "Baseline PointNet-style",
+      "parameters": 492354,
+      "macro_f1": {
+        "mean": 0.8304578016707564,
+        "std": 0.019175610460670036
+      },
+      "recall": {
+        "mean": 0.7937499999999998,
+        "std": 0.046770717334674285
+      },
+      "precision": {
+        "mean": 0.8652662452879035,
+        "std": 0.058285083624710535
+      },
+      "accuracy": {
+        "mean": 0.8312499999999999,
+        "std": 0.019263793759278048
+      },
+      "roc_auc": {
+        "mean": 0.9157812500000001,
+        "std": 0.023235260259698805
+      },
+      "confounder_far": {
+        "mean": 0.13125,
+        "std": 0.07234898064243891
+      },
+      "confusion_matrix_seed42": {
+        "TP": 129,
+        "FP": 16,
+        "TN": 144,
+        "FN": 31
+      },
+      "confusion_matrix_per_seed": {
+        "seed_42": {
+          "TP": 129,
+          "FP": 16,
+          "TN": 144,
+          "FN": 31
+        },
+        "seed_52": {
+          "TP": 135,
+          "FP": 37,
+          "TN": 123,
+          "FN": 25
+        },
+        "seed_62": {
+          "TP": 117,
+          "FP": 10,
+          "TN": 150,
+          "FN": 43
+        }
+      },
+      "confusion_matrix_pooled_all_seeds": {
+        "TP": 381,
+        "FP": 63,
+        "TN": 417,
+        "FN": 99
+      },
+      "latency_ms": {
+        "prep": 0.497,
+        "forward": 7.682,
+        "total": 8.18
+      }
+    }
+  },
+  "seed_ablation_comparison": {
+    "seed_42": {
+      "Rep_1_Doppler_Time": {
+        "macro_f1": 0.521496496251918,
+        "recall": 0.49375,
+        "precision": 0.5231788079470199,
+        "accuracy": 0.521875,
+        "roc_auc": 0.5513671874999999,
+        "confounder_far": 0.45,
+        "confusion_matrix": {
+          "TP": 79,
+          "FP": 72,
+          "TN": 88,
+          "FN": 81
+        }
+      },
+      "Rep_2_Orthogonal_Projections": {
+        "macro_f1": 0.7236940225283567,
+        "recall": 0.65625,
+        "precision": 0.7608695652173914,
+        "accuracy": 0.725,
+        "roc_auc": 0.8007031249999998,
+        "confounder_far": 0.20625,
+        "confusion_matrix": {
+          "TP": 105,
+          "FP": 33,
+          "TN": 127,
+          "FN": 55
+        }
+      },
+      "Rep_3_Native_3D_Point_Sets": {
+        "macro_f1": 0.8528015659407879,
+        "recall": 0.80625,
+        "precision": 0.8896551724137931,
+        "accuracy": 0.853125,
+        "roc_auc": 0.9386328125000001,
+        "confounder_far": 0.1,
+        "confusion_matrix": {
+          "TP": 129,
+          "FP": 16,
+          "TN": 144,
+          "FN": 31
+        }
+      }
+    },
+    "seed_52": {
+      "Rep_1_Doppler_Time": {
+        "macro_f1": 0.534426487357949,
+        "recall": 0.45625,
+        "precision": 0.5447761194029851,
+        "accuracy": 0.5375,
+        "roc_auc": 0.5463671875,
+        "confounder_far": 0.38125,
+        "confusion_matrix": {
+          "TP": 73,
+          "FP": 61,
+          "TN": 99,
+          "FN": 87
+        }
+      },
+      "Rep_2_Orthogonal_Projections": {
+        "macro_f1": 0.6873045653533458,
+        "recall": 0.6625,
+        "precision": 0.6973684210526315,
+        "accuracy": 0.6875,
+        "roc_auc": 0.787265625,
+        "confounder_far": 0.2875,
+        "confusion_matrix": {
+          "TP": 106,
+          "FP": 46,
+          "TN": 114,
+          "FN": 54
+        }
+      },
+      "Rep_3_Native_3D_Point_Sets": {
+        "macro_f1": 0.8059771553747457,
+        "recall": 0.84375,
+        "precision": 0.7848837209302325,
+        "accuracy": 0.80625,
+        "roc_auc": 0.88390625,
+        "confounder_far": 0.23125,
+        "confusion_matrix": {
+          "TP": 135,
+          "FP": 37,
+          "TN": 123,
+          "FN": 25
+        }
+      }
+    },
+    "seed_62": {
+      "Rep_1_Doppler_Time": {
+        "macro_f1": 0.534426487357949,
+        "recall": 0.61875,
+        "precision": 0.532258064516129,
+        "accuracy": 0.5375,
+        "roc_auc": 0.557109375,
+        "confounder_far": 0.54375,
+        "confusion_matrix": {
+          "TP": 99,
+          "FP": 87,
+          "TN": 73,
+          "FN": 61
+        }
+      },
+      "Rep_2_Orthogonal_Projections": {
+        "macro_f1": 0.7069683632174402,
+        "recall": 0.61875,
+        "precision": 0.7557251908396947,
+        "accuracy": 0.709375,
+        "roc_auc": 0.817578125,
+        "confounder_far": 0.2,
+        "confusion_matrix": {
+          "TP": 99,
+          "FP": 32,
+          "TN": 128,
+          "FN": 61
+        }
+      },
+      "Rep_3_Native_3D_Point_Sets": {
+        "macro_f1": 0.8325946836967357,
+        "recall": 0.73125,
+        "precision": 0.9212598425196851,
+        "accuracy": 0.834375,
+        "roc_auc": 0.9248046875,
+        "confounder_far": 0.0625,
+        "confusion_matrix": {
+          "TP": 117,
+          "FP": 10,
+          "TN": 150,
+          "FN": 43
+        }
+      }
+    }
+  },
+  "ablation": {
+    "per_seed_by_representation": {
+      "rep1": {
+        "seed_42": {
+          "Baseline ResNet-18 (11.17M)": {
+            "macro_f1": 0.521496496251918,
+            "recall": 0.49375,
+            "precision": 0.5231788079470199,
+            "accuracy": 0.521875,
+            "roc_auc": 0.5513671874999999,
+            "confounder_far": 0.45,
+            "confusion_matrix": {
+              "TP": 79,
+              "FP": 72,
+              "TN": 88,
+              "FN": 81
+            }
+          },
+          "ResNet-18 half width (2.80M)": {
+            "macro_f1": 0.553015873015873,
+            "recall": 0.5375,
+            "precision": 0.5548387096774193,
+            "accuracy": 0.553125,
+            "roc_auc": 0.567890625,
+            "confounder_far": 0.43125,
+            "confusion_matrix": {
+              "TP": 86,
+              "FP": 69,
+              "TN": 91,
+              "FN": 74
+            }
+          },
+          "Narrow CNN, p=0.5 (104K)": {
+            "macro_f1": 0.5311767463666198,
+            "recall": 0.54375,
+            "precision": 0.5304878048780488,
+            "accuracy": 0.53125,
+            "roc_auc": 0.5529296874999999,
+            "confounder_far": 0.48125,
+            "confusion_matrix": {
+              "TP": 87,
+              "FP": 77,
+              "TN": 83,
+              "FN": 73
+            }
+          },
+          "Ultra-Light CNN, p=0.5 (26K)": {
+            "macro_f1": 0.5562326653384897,
+            "recall": 0.5625,
+            "precision": 0.5555555555555556,
+            "accuracy": 0.55625,
+            "roc_auc": 0.5900000000000001,
+            "confounder_far": 0.45,
+            "confusion_matrix": {
+              "TP": 90,
+              "FP": 72,
+              "TN": 88,
+              "FN": 70
+            }
+          }
+        },
+        "seed_52": {
+          "Baseline ResNet-18 (11.17M)": {
+            "macro_f1": 0.534426487357949,
+            "recall": 0.45625,
+            "precision": 0.5447761194029851,
+            "accuracy": 0.5375,
+            "roc_auc": 0.5463671875,
+            "confounder_far": 0.38125,
+            "confusion_matrix": {
+              "TP": 73,
+              "FP": 61,
+              "TN": 99,
+              "FN": 87
+            }
+          },
+          "ResNet-18 half width (2.80M)": {
+            "macro_f1": 0.5435895431987808,
+            "recall": 0.525,
+            "precision": 0.5454545454545454,
+            "accuracy": 0.54375,
+            "roc_auc": 0.548046875,
+            "confounder_far": 0.4375,
+            "confusion_matrix": {
+              "TP": 84,
+              "FP": 70,
+              "TN": 90,
+              "FN": 76
+            }
+          },
+          "Narrow CNN, p=0.5 (104K)": {
+            "macro_f1": 0.5238095238095238,
+            "recall": 0.575,
+            "precision": 0.5227272727272727,
+            "accuracy": 0.525,
+            "roc_auc": 0.5537890624999999,
+            "confounder_far": 0.525,
+            "confusion_matrix": {
+              "TP": 92,
+              "FP": 84,
+              "TN": 76,
+              "FN": 68
+            }
+          },
+          "Ultra-Light CNN, p=0.5 (26K)": {
+            "macro_f1": 0.5623461373138994,
+            "recall": 0.58125,
+            "precision": 0.5602409638554217,
+            "accuracy": 0.5625,
+            "roc_auc": 0.5819921875,
+            "confounder_far": 0.45625,
+            "confusion_matrix": {
+              "TP": 93,
+              "FP": 73,
+              "TN": 87,
+              "FN": 67
+            }
+          }
+        },
+        "seed_62": {
+          "Baseline ResNet-18 (11.17M)": {
+            "macro_f1": 0.534426487357949,
+            "recall": 0.61875,
+            "precision": 0.532258064516129,
+            "accuracy": 0.5375,
+            "roc_auc": 0.557109375,
+            "confounder_far": 0.54375,
+            "confusion_matrix": {
+              "TP": 99,
+              "FP": 87,
+              "TN": 73,
+              "FN": 61
+            }
+          },
+          "ResNet-18 half width (2.80M)": {
+            "macro_f1": 0.54375,
+            "recall": 0.54375,
+            "precision": 0.54375,
+            "accuracy": 0.54375,
+            "roc_auc": 0.54125,
+            "confounder_far": 0.45625,
+            "confusion_matrix": {
+              "TP": 87,
+              "FP": 73,
+              "TN": 87,
+              "FN": 73
+            }
+          },
+          "Narrow CNN, p=0.5 (104K)": {
+            "macro_f1": 0.5622263914946841,
+            "recall": 0.5875,
+            "precision": 0.5595238095238095,
+            "accuracy": 0.5625,
+            "roc_auc": 0.5633203124999999,
+            "confounder_far": 0.4625,
+            "confusion_matrix": {
+              "TP": 94,
+              "FP": 74,
+              "TN": 86,
+              "FN": 66
+            }
+          },
+          "Ultra-Light CNN, p=0.5 (26K)": {
+            "macro_f1": 0.5374819328880034,
+            "recall": 0.53125,
+            "precision": 0.5379746835443038,
+            "accuracy": 0.5375,
+            "roc_auc": 0.5606640625,
+            "confounder_far": 0.45625,
+            "confusion_matrix": {
+              "TP": 85,
+              "FP": 73,
+              "TN": 87,
+              "FN": 75
+            }
+          }
+        }
+      },
+      "rep2": {
+        "seed_42": {
+          "Baseline ResNet-18 (11.17M)": {
+            "macro_f1": 0.7236940225283567,
+            "recall": 0.65625,
+            "precision": 0.7608695652173914,
+            "accuracy": 0.725,
+            "roc_auc": 0.8007031249999998,
+            "confounder_far": 0.20625,
+            "confusion_matrix": {
+              "TP": 105,
+              "FP": 33,
+              "TN": 127,
+              "FN": 55
+            }
+          },
+          "ResNet-18 half width (2.80M)": {
+            "macro_f1": 0.6749873041915699,
+            "recall": 0.66875,
+            "precision": 0.6772151898734177,
+            "accuracy": 0.675,
+            "roc_auc": 0.7406250000000001,
+            "confounder_far": 0.31875,
+            "confusion_matrix": {
+              "TP": 107,
+              "FP": 51,
+              "TN": 109,
+              "FN": 53
+            }
+          },
+          "Narrow CNN, p=0.5 (104K)": {
+            "macro_f1": 0.7093494545419031,
+            "recall": 0.7,
+            "precision": 0.7133757961783439,
+            "accuracy": 0.709375,
+            "roc_auc": 0.80421875,
+            "confounder_far": 0.28125,
+            "confusion_matrix": {
+              "TP": 112,
+              "FP": 45,
+              "TN": 115,
+              "FN": 48
+            }
+          },
+          "Ultra-Light CNN, p=0.5 (26K)": {
+            "macro_f1": 0.6638886434804803,
+            "recall": 0.59375,
+            "precision": 0.6934306569343066,
+            "accuracy": 0.665625,
+            "roc_auc": 0.751640625,
+            "confounder_far": 0.2625,
+            "confusion_matrix": {
+              "TP": 95,
+              "FP": 42,
+              "TN": 118,
+              "FN": 65
+            }
+          }
+        },
+        "seed_52": {
+          "Baseline ResNet-18 (11.17M)": {
+            "macro_f1": 0.6873045653533458,
+            "recall": 0.6625,
+            "precision": 0.6973684210526315,
+            "accuracy": 0.6875,
+            "roc_auc": 0.787265625,
+            "confounder_far": 0.2875,
+            "confusion_matrix": {
+              "TP": 106,
+              "FP": 46,
+              "TN": 114,
+              "FN": 54
+            }
+          },
+          "ResNet-18 half width (2.80M)": {
+            "macro_f1": 0.8062197218315361,
+            "recall": 0.81875,
+            "precision": 0.7987804878048781,
+            "accuracy": 0.80625,
+            "roc_auc": 0.8733203125,
+            "confounder_far": 0.20625,
+            "confusion_matrix": {
+              "TP": 131,
+              "FP": 33,
+              "TN": 127,
+              "FN": 29
+            }
+          },
+          "Narrow CNN, p=0.5 (104K)": {
+            "macro_f1": 0.7310819262038775,
+            "recall": 0.70625,
+            "precision": 0.743421052631579,
+            "accuracy": 0.73125,
+            "roc_auc": 0.8046875,
+            "confounder_far": 0.24375,
+            "confusion_matrix": {
+              "TP": 113,
+              "FP": 39,
+              "TN": 121,
+              "FN": 47
+            }
+          },
+          "Ultra-Light CNN, p=0.5 (26K)": {
+            "macro_f1": 0.7375,
+            "recall": 0.7375,
+            "precision": 0.7375,
+            "accuracy": 0.7375,
+            "roc_auc": 0.802421875,
+            "confounder_far": 0.2625,
+            "confusion_matrix": {
+              "TP": 118,
+              "FP": 42,
+              "TN": 118,
+              "FN": 42
+            }
+          }
+        },
+        "seed_62": {
+          "Baseline ResNet-18 (11.17M)": {
+            "macro_f1": 0.7069683632174402,
+            "recall": 0.61875,
+            "precision": 0.7557251908396947,
+            "accuracy": 0.709375,
+            "roc_auc": 0.817578125,
+            "confounder_far": 0.2,
+            "confusion_matrix": {
+              "TP": 99,
+              "FP": 32,
+              "TN": 128,
+              "FN": 61
+            }
+          },
+          "ResNet-18 half width (2.80M)": {
+            "macro_f1": 0.7468527507300446,
+            "recall": 0.7375,
+            "precision": 0.7515923566878981,
+            "accuracy": 0.746875,
+            "roc_auc": 0.8351953125,
+            "confounder_far": 0.24375,
+            "confusion_matrix": {
+              "TP": 118,
+              "FP": 39,
+              "TN": 121,
+              "FN": 42
+            }
+          },
+          "Narrow CNN, p=0.5 (104K)": {
+            "macro_f1": 0.7152885734119419,
+            "recall": 0.68125,
+            "precision": 0.7315436241610739,
+            "accuracy": 0.715625,
+            "roc_auc": 0.7983984375000001,
+            "confounder_far": 0.25,
+            "confusion_matrix": {
+              "TP": 109,
+              "FP": 40,
+              "TN": 120,
+              "FN": 51
+            }
+          },
+          "Ultra-Light CNN, p=0.5 (26K)": {
+            "macro_f1": 0.6999882807922184,
+            "recall": 0.69375,
+            "precision": 0.7025316455696202,
+            "accuracy": 0.7,
+            "roc_auc": 0.75953125,
+            "confounder_far": 0.29375,
+            "confusion_matrix": {
+              "TP": 111,
+              "FP": 47,
+              "TN": 113,
+              "FN": 49
+            }
+          }
+        }
+      },
+      "rep3": {
+        "seed_42": {
+          "Baseline PointNet-style (0.49M)": {
+            "macro_f1": 0.8528015659407879,
+            "recall": 0.80625,
+            "precision": 0.8896551724137931,
+            "accuracy": 0.853125,
+            "roc_auc": 0.9386328125000001,
+            "confounder_far": 0.1,
+            "confusion_matrix": {
+              "TP": 129,
+              "FP": 16,
+              "TN": 144,
+              "FN": 31
+            }
+          },
+          "LSTM head (0.53M)": {
+            "macro_f1": 0.7836121482962397,
+            "recall": 0.725,
+            "precision": 0.8226950354609929,
+            "accuracy": 0.784375,
+            "roc_auc": 0.8598828125,
+            "confounder_far": 0.15625,
+            "confusion_matrix": {
+              "TP": 116,
+              "FP": 25,
+              "TN": 135,
+              "FN": 44
+            }
+          },
+          "Attention head (295K)": {
+            "macro_f1": 0.8241689234271361,
+            "recall": 0.75625,
+            "precision": 0.8768115942028986,
+            "accuracy": 0.825,
+            "roc_auc": 0.904609375,
+            "confounder_far": 0.10625,
+            "confusion_matrix": {
+              "TP": 121,
+              "FP": 17,
+              "TN": 143,
+              "FN": 39
+            }
+          },
+          "Narrow PointNet-style, p=0.5 (124K)": {
+            "macro_f1": 0.8037664187371419,
+            "recall": 0.69375,
+            "precision": 0.8951612903225806,
+            "accuracy": 0.80625,
+            "roc_auc": 0.9044140625,
+            "confounder_far": 0.08125,
+            "confusion_matrix": {
+              "TP": 111,
+              "FP": 13,
+              "TN": 147,
+              "FN": 49
+            }
+          }
+        },
+        "seed_52": {
+          "Baseline PointNet-style (0.49M)": {
+            "macro_f1": 0.8059771553747457,
+            "recall": 0.84375,
+            "precision": 0.7848837209302325,
+            "accuracy": 0.80625,
+            "roc_auc": 0.88390625,
+            "confounder_far": 0.23125,
+            "confusion_matrix": {
+              "TP": 135,
+              "FP": 37,
+              "TN": 123,
+              "FN": 25
+            }
+          },
+          "LSTM head (0.53M)": {
+            "macro_f1": 0.7013018914271678,
+            "recall": 0.78125,
+            "precision": 0.6756756756756757,
+            "accuracy": 0.703125,
+            "roc_auc": 0.79541015625,
+            "confounder_far": 0.375,
+            "confusion_matrix": {
+              "TP": 125,
+              "FP": 60,
+              "TN": 100,
+              "FN": 35
+            }
+          },
+          "Attention head (295K)": {
+            "macro_f1": 0.7249570245350836,
+            "recall": 0.7125,
+            "precision": 0.7307692307692307,
+            "accuracy": 0.725,
+            "roc_auc": 0.8108398437500001,
+            "confounder_far": 0.2625,
+            "confusion_matrix": {
+              "TP": 114,
+              "FP": 42,
+              "TN": 118,
+              "FN": 46
+            }
+          },
+          "Narrow PointNet-style, p=0.5 (124K)": {
+            "macro_f1": 0.8404988320839726,
+            "recall": 0.8125,
+            "precision": 0.8609271523178808,
+            "accuracy": 0.840625,
+            "roc_auc": 0.89703125,
+            "confounder_far": 0.13125,
+            "confusion_matrix": {
+              "TP": 130,
+              "FP": 21,
+              "TN": 139,
+              "FN": 30
+            }
+          }
+        },
+        "seed_62": {
+          "Baseline PointNet-style (0.49M)": {
+            "macro_f1": 0.8325946836967357,
+            "recall": 0.73125,
+            "precision": 0.9212598425196851,
+            "accuracy": 0.834375,
+            "roc_auc": 0.9248046875,
+            "confounder_far": 0.0625,
+            "confusion_matrix": {
+              "TP": 117,
+              "FP": 10,
+              "TN": 150,
+              "FN": 43
+            }
+          },
+          "LSTM head (0.53M)": {
+            "macro_f1": 0.6899437240029361,
+            "recall": 0.7375,
+            "precision": 0.6742857142857143,
+            "accuracy": 0.690625,
+            "roc_auc": 0.7828515625,
+            "confounder_far": 0.35625,
+            "confusion_matrix": {
+              "TP": 118,
+              "FP": 57,
+              "TN": 103,
+              "FN": 42
+            }
+          },
+          "Attention head (295K)": {
+            "macro_f1": 0.7192401344650479,
+            "recall": 0.81875,
+            "precision": 0.6858638743455497,
+            "accuracy": 0.721875,
+            "roc_auc": 0.8225390625,
+            "confounder_far": 0.375,
+            "confusion_matrix": {
+              "TP": 131,
+              "FP": 60,
+              "TN": 100,
+              "FN": 29
+            }
+          },
+          "Narrow PointNet-style, p=0.5 (124K)": {
+            "macro_f1": 0.7659295183318471,
+            "recall": 0.6125,
+            "precision": 0.8990825688073395,
+            "accuracy": 0.771875,
+            "roc_auc": 0.9168359374999999,
+            "confounder_far": 0.06875,
+            "confusion_matrix": {
+              "TP": 98,
+              "FP": 11,
+              "TN": 149,
+              "FN": 62
+            }
+          }
+        }
+      }
+    },
+    "aggregate_summary_by_representation": {
+      "rep1": {
+        "Baseline ResNet-18 (11.17M)": {
+          "macro_f1": {
+            "mean": 0.5301164903226053,
+            "std": 0.006095256261170841
+          },
+          "recall": {
+            "mean": 0.5229166666666667,
+            "std": 0.0694722166688878
+          },
+          "precision": {
+            "mean": 0.5334043306220447,
+            "std": 0.008854242298494354
+          },
+          "accuracy": {
+            "mean": 0.5322916666666666,
+            "std": 0.00736569563735987
+          },
+          "roc_auc": {
+            "mean": 0.5516145833333334,
+            "std": 0.004388967349696442
+          },
+          "confounder_far": {
+            "mean": 0.4583333333333333,
+            "std": 0.06660153067977408
+          }
+        },
+        "ResNet-18 half width (2.80M)": {
+          "macro_f1": {
+            "mean": 0.5467851387382179,
+            "std": 0.004406281412205649
+          },
+          "recall": {
+            "mean": 0.5354166666666667,
+            "std": 0.007795119555779017
+          },
+          "precision": {
+            "mean": 0.5480144183773216,
+            "std": 0.004875420160567046
+          },
+          "accuracy": {
+            "mean": 0.5468749999999999,
+            "std": 0.004419417382415932
+          },
+          "roc_auc": {
+            "mean": 0.5523958333333333,
+            "std": 0.011302383348552575
+          },
+          "confounder_far": {
+            "mean": 0.44166666666666665,
+            "std": 0.010622957319984956
+          }
+        },
+        "Narrow CNN, p=0.5 (104K)": {
+          "macro_f1": {
+            "mean": 0.5390708872236093,
+            "std": 0.016647362665745197
+          },
+          "recall": {
+            "mean": 0.56875,
+            "std": 0.018399501804849703
+          },
+          "precision": {
+            "mean": 0.5375796290430437,
+            "std": 0.015837019028111028
+          },
+          "accuracy": {
+            "mean": 0.5395833333333333,
+            "std": 0.016404183070857933
+          },
+          "roc_auc": {
+            "mean": 0.5566796874999999,
+            "std": 0.0047087193333661985
+          },
+          "confounder_far": {
+            "mean": 0.4895833333333333,
+            "std": 0.026187093937451115
+          }
+        },
+        "Ultra-Light CNN, p=0.5 (26K)": {
+          "macro_f1": {
+            "mean": 0.5520202451801308,
+            "std": 0.010578768930459963
+          },
+          "recall": {
+            "mean": 0.5583333333333333,
+            "std": 0.020623947784607653
+          },
+          "precision": {
+            "mean": 0.5512570676517604,
+            "std": 0.00958486857561175
+          },
+          "accuracy": {
+            "mean": 0.5520833333333334,
+            "std": 0.010622957319984982
+          },
+          "roc_auc": {
+            "mean": 0.5775520833333334,
+            "std": 0.012381039294262704
+          },
+          "confounder_far": {
+            "mean": 0.45416666666666666,
+            "std": 0.0029462782549439376
+          }
+        }
+      },
+      "rep2": {
+        "Baseline ResNet-18 (11.17M)": {
+          "macro_f1": {
+            "mean": 0.7059889836997142,
+            "std": 0.01487206635615448
+          },
+          "recall": {
+            "mean": 0.6458333333333334,
+            "std": 0.0193200385322827
+          },
+          "precision": {
+            "mean": 0.7379877257032392,
+            "std": 0.02879886664041525
+          },
+          "accuracy": {
+            "mean": 0.7072916666666668,
+            "std": 0.015380024021076449
+          },
+          "roc_auc": {
+            "mean": 0.8018489583333333,
+            "std": 0.01240152180401891
+          },
+          "confounder_far": {
+            "mean": 0.23124999999999998,
+            "std": 0.03985651347856039
+          }
+        },
+        "ResNet-18 half width (2.80M)": {
+          "macro_f1": {
+            "mean": 0.7426865922510503,
+            "std": 0.05365634176411768
+          },
+          "recall": {
+            "mean": 0.7416666666666666,
+            "std": 0.061308079039842346
+          },
+          "precision": {
+            "mean": 0.7425293447887314,
+            "std": 0.0500408769827529
+          },
+          "accuracy": {
+            "mean": 0.7427083333333334,
+            "std": 0.05366352863496357
+          },
+          "roc_auc": {
+            "mean": 0.8163802083333334,
+            "std": 0.05578242016065661
+          },
+          "confounder_far": {
+            "mean": 0.25625,
+            "std": 0.04677071733467426
+          }
+        },
+        "Narrow CNN, p=0.5 (104K)": {
+          "macro_f1": {
+            "mean": 0.7185733180525741,
+            "std": 0.00917123189290844
+          },
+          "recall": {
+            "mean": 0.6958333333333333,
+            "std": 0.010622957319984966
+          },
+          "precision": {
+            "mean": 0.7294468243236656,
+            "std": 0.012355209049999455
+          },
+          "accuracy": {
+            "mean": 0.71875,
+            "std": 0.009199750902424832
+          },
+          "roc_auc": {
+            "mean": 0.8024348958333333,
+            "std": 0.002860615149249874
+          },
+          "confounder_far": {
+            "mean": 0.25833333333333336,
+            "std": 0.01640418307085794
+          }
+        },
+        "Ultra-Light CNN, p=0.5 (26K)": {
+          "macro_f1": {
+            "mean": 0.7004589747575661,
+            "std": 0.030053553497800364
+          },
+          "recall": {
+            "mean": 0.6749999999999999,
+            "std": 0.06016470449247356
+          },
+          "precision": {
+            "mean": 0.7111541008346421,
+            "std": 0.018996259292440105
+          },
+          "accuracy": {
+            "mean": 0.7010416666666668,
+            "std": 0.029352089174177864
+          },
+          "roc_auc": {
+            "mean": 0.7711979166666666,
+            "std": 0.02231243556441053
+          },
+          "confounder_far": {
+            "mean": 0.2729166666666667,
+            "std": 0.01473139127471974
+          }
+        }
+      },
+      "rep3": {
+        "Baseline PointNet-style (0.49M)": {
+          "macro_f1": {
+            "mean": 0.8304578016707564,
+            "std": 0.019175610460670036
+          },
+          "recall": {
+            "mean": 0.7937499999999998,
+            "std": 0.046770717334674285
+          },
+          "precision": {
+            "mean": 0.8652662452879035,
+            "std": 0.058285083624710535
+          },
+          "accuracy": {
+            "mean": 0.8312499999999999,
+            "std": 0.019263793759278048
+          },
+          "roc_auc": {
+            "mean": 0.9157812500000001,
+            "std": 0.023235260259698805
+          },
+          "confounder_far": {
+            "mean": 0.13125,
+            "std": 0.07234898064243891
+          }
+        },
+        "LSTM head (0.53M)": {
+          "macro_f1": {
+            "mean": 0.7249525879087813,
+            "std": 0.04173695413297139
+          },
+          "recall": {
+            "mean": 0.7479166666666668,
+            "std": 0.02411632688081297
+          },
+          "precision": {
+            "mean": 0.7242188084741277,
+            "std": 0.06963551995613951
+          },
+          "accuracy": {
+            "mean": 0.7260416666666667,
+            "std": 0.04156236946512501
+          },
+          "roc_auc": {
+            "mean": 0.8127148437499999,
+            "std": 0.03374455537559718
+          },
+          "confounder_far": {
+            "mean": 0.29583333333333334,
+            "std": 0.09899670308763935
+          }
+        },
+        "Attention head (295K)": {
+          "macro_f1": {
+            "mean": 0.7561220274757559,
+            "std": 0.04817299204936099
+          },
+          "recall": {
+            "mean": 0.7625000000000001,
+            "std": 0.04360093653428404
+          },
+          "precision": {
+            "mean": 0.7644815664392263,
+            "std": 0.08151747915600673
+          },
+          "accuracy": {
+            "mean": 0.7572916666666666,
+            "std": 0.04789401638571935
+          },
+          "roc_auc": {
+            "mean": 0.8459960937500001,
+            "std": 0.04172014288892749
+          },
+          "confounder_far": {
+            "mean": 0.24791666666666667,
+            "std": 0.1102002596286516
+          }
+        },
+        "Narrow PointNet-style, p=0.5 (124K)": {
+          "macro_f1": {
+            "mean": 0.8033982563843205,
+            "std": 0.03044390794016935
+          },
+          "recall": {
+            "mean": 0.7062500000000002,
+            "std": 0.08212668060177925
+          },
+          "precision": {
+            "mean": 0.8850570038159336,
+            "std": 0.017137316130349807
+          },
+          "accuracy": {
+            "mean": 0.80625,
+            "std": 0.02806706996939057
+          },
+          "roc_auc": {
+            "mean": 0.9060937499999998,
+            "std": 0.0081720019708109
+          },
+          "confounder_far": {
+            "mean": 0.09375,
+            "std": 0.027003086243366083
+          }
+        }
+      }
+    },
+    "parameter_counts": {
+      "rep1": {
+        "Baseline ResNet-18": 11169858,
+        "ResNet-18 half width": 2795554,
+        "Narrow CNN, p=0.5": 104210,
+        "Ultra-Light CNN, p=0.5": 26314
+      },
+      "rep2": {
+        "Baseline ResNet-18": 11169858,
+        "ResNet-18 half width": 2795554,
+        "Narrow CNN, p=0.5": 104210,
+        "Ultra-Light CNN, p=0.5": 26314
+      },
+      "rep3": {
+        "Baseline PointNet-style": 492354,
+        "LSTM head": 533378,
+        "Attention head": 295043,
+        "Narrow PointNet-style, p=0.5": 124322
+      }
+    },
+    "note": "Variants are evaluated directly on the held-out folds without tuning."
+  }
+}
